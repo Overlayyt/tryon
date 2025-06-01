@@ -184,7 +184,7 @@ function takeSnapshot() {
   // Draw video
   ctx.drawImage(videoElement, 0, 0, snapshotCanvas.width, snapshotCanvas.height);
 
-  // Overlay jewelry
+  // Overlay earring if active and available
   if (currentMode === 'earring' && earringImg) {
     const leftSmooth = smooth(leftEarPositions);
     const rightSmooth = smooth(rightEarPositions);
@@ -192,6 +192,7 @@ function takeSnapshot() {
     if (rightSmooth) ctx.drawImage(earringImg, rightSmooth.x - 20, rightSmooth.y, 100, 100);
   }
 
+  // Overlay necklace if active and available
   if (currentMode === 'necklace' && necklaceImg) {
     const chinSmooth = smooth(chinPositions);
     if (chinSmooth) ctx.drawImage(necklaceImg, chinSmooth.x - 100, chinSmooth.y, 200, 100);

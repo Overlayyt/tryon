@@ -11,25 +11,32 @@
   <video id="webcam" autoplay muted playsinline></video>
   <canvas id="overlay"></canvas>
 
-  <div id="branding">Overlay Jewels</div>
+  <!-- Branding with Camera Icon -->
+  <div id="branding">
+    <img src="camera-icon.png" alt="Camera Icon" class="camera-icon" /> Overlay Jewels
+  </div>
 
+  <!-- Mode Selection Buttons -->
   <div id="jewelry-mode">
     <button onclick="selectMode('earring')">Earring</button>
     <button onclick="selectMode('necklace')">Necklace</button>
   </div>
 
+  <!-- Earring Options -->
   <div id="earring-options" class="options-group" style="display: none;">
-    <!-- Earrings dynamically inserted -->
+    <!-- Dynamically populated -->
   </div>
 
+  <!-- Necklace Options -->
   <div id="necklace-options" class="options-group" style="display: none;">
     <p class="label">Select Necklace</p>
-    <!-- Necklaces dynamically inserted -->
+    <!-- Dynamically populated -->
   </div>
 
-  <!-- Snapshot Button -->
+  <!-- Save Snapshot Button (Top Right) -->
   <button id="snapshot-btn" onclick="takeSnapshot()">📸 Save Snapshot</button>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
   <script src="script.js"></script>
